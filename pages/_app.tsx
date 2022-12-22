@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import '../styles/globals.css'
+import Head from "next/head";
+import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -15,23 +15,13 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="Keywords" />
         <title>Next.js PWA Example</title>
 
+        {/* Important for PWA */}
         <link rel="manifest" href="/manifest.json" />
-        <link
-          href="/icons/favicon-16x16.png"
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-        />
-        <link
-          href="/icons/favicon-32x32.png"
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-        />
+        <link href="/icons/favicon.ico" rel="icon" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         <meta name="theme-color" content="#317EFB" />
       </Head>
       <Component {...pageProps} />
     </>
-  )
+  );
 }
